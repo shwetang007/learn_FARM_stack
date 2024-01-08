@@ -1,13 +1,15 @@
-from model import Todo
+from model import Todo #Imports Todo function from model.py file
 
 #MongoDB driver for FastAPI
 import motor.motor_asyncio
+#Brings motor_asynchio module from "motor" package into this package.
 
 client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
+# Stores an instance of AsynchIOMotorClient from MongoDB database.
 
-database = client.TodoList
+database = client.TodoList # Links The List of Tasks(Client) to variable  named database.
 
-collection = database.todo
+collection = database.todo # Similiarily assigns Database
 
 async def fetch_one_todo(title):
     document = await collection.find_one({"title":title})
