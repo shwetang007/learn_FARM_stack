@@ -1,6 +1,6 @@
 # learn_FARM_stack
 
-Version control for keeping track of how Kaustubh is learning FARM stack being a farmer himself from Yavatmal, Maharashtra, India.
+Version control for keeping track of how Shwetang is learning FARM stack being a farmer himself from Varansi, Uttar Pradesh, India.
 
 PLEASE SWITCH TO DIFFERENT BRANCHES FOR LEARNING DIFFERENT COMPONENTS OF FARM STACK
 
@@ -12,7 +12,7 @@ Frontend: ReactJS
 
 Database: MongoDB
 
-I had NO background in Web Application Development/JS. I was good with python because of my experience in deep learning. I focused more on learning React and JSX. Now after following this routine, I am confident in navigating through the stack. There's a lot more to learn, but this learning regime will get you started faster and in the best way possible.
+I had NO background in Web Application Development/JS. I was good with python because of my experience in deep learning as well as basic Java Concepts. I focused more on learning React and JSX. Now after following this routine, I am confident in navigating through the stack. There's a lot more to learn, but this learning regime will get you started faster and in the best way possible.
 
 The flow of learning I suggest be like this:
 
