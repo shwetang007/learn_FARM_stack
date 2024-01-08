@@ -7,19 +7,21 @@ import motor.motor_asyncio
 client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
 # Stores an instance of AsynchIOMotorClient from MongoDB database.
 
-database = client.TodoList # Links The List of Tasks(Client) to variable  named database.
+database = client.TodoList # Links The List of Tasks(Client) to variable database.
 
-collection = database.todo # Similiarily assigns Database
+collection = database.todo # Similiarily assigns Database to a varaible collection which will have collection of databases.
 
 async def fetch_one_todo(title):
     document = await collection.find_one({"title":title})
     return document
+    #function that fetches one todo file in which a variable document waits for collection to get the file name with desired title.
 
 async def fetch_all_todos():
-    todos = []
+    todos = [] # Inorder to store multiple elements we need list [] that will store all documents.
     cursor = collection.find({})
+    # in order to find all the files we use .find() method because its scalable .
     
-    async for document in cursor:
+    async for document in cursor: # Loop which iterates the whole 
         todos.append(Todo(**document))
     
     return todos
