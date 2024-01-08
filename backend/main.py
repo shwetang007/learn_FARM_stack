@@ -7,7 +7,7 @@ from model import Todo
 
 from database import (
     fetch_one_todo,
-    fetch_all_todos,
+    fetch_all_todos,   # Imports all the Attributes/Functions From the Database.
     create_todo,
     update_todo,
     remove_todo,
@@ -22,10 +22,10 @@ origins = ['http://localhost:3000',]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins,   # Middleware(CORS) to handle Cross-Origin Resource Sharing.  
     allow_credentials = True,
-    allow_methods = ["*"],
-    allow_headers = ["*"],
+    allow_methods = ["*"], # Allows only Single Command(String).
+    allow_headers = ["*"], # Header limit=1.
 )
 
 @app.get("/")
@@ -44,7 +44,7 @@ async def get_todo_by_title(title):
         return response
     raise HTTPException(404, f"There is no TODO item with this title {title}")
 
-@app.post("/api/todo/", response_model=Todo)
+@app.post("/api/todo/", response_model=Todo) # Route definition,post endpoint.
 async def post_todo(todo:Todo):
     response = await create_todo(todo.dict())
     if response:
@@ -60,7 +60,7 @@ async def post_todo_by_id(title:str, desc:str):
 
 @app.delete("/api/todo/{title}")
 async def delete_todo(title):
-    response = await remove_todo(title)
+    response = await remove_todo(title)  
     if response:
         return "Succesfully deleted todo item!"
     raise HTTPException(404, f"There is no TODO item with this title {title}")
