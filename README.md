@@ -1,6 +1,6 @@
 # learn_FARM_stack
 
-Version control for keeping track of how Shwetang is learning FARM stack being a farmer himself from Varansi, Uttar Pradesh, India.
+Version control for keeping track of how Shwetang is learning FARM stack being a farmer himself from Varanasi, Uttar Pradesh, India.
 
 PLEASE SWITCH TO DIFFERENT BRANCHES FOR LEARNING DIFFERENT COMPONENTS OF FARM STACK
 
