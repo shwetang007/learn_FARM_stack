@@ -5,17 +5,17 @@ from pydantic import BaseModel
 class Item(BaseModel):
     name: str
     price: float
-    brand: Optional[str] = None
+    brand: Optional[str] = None # this Attribute is Optional as it's already assigned to none.
 
 class UpdateItem(BaseModel):
     name: Optional[str] = None
     price: Optional[float] = None
-    brand: Optional[str] = None
+    brand: Optional[str] = None  # All These parts need to be explicitily assigned otherwise taken as "None".
     
 
 app = FastAPI()
 
-inventory = {}
+inventory = {} # Dictionary as it needs specific key to bringout elements.
 
 @app.get("/")
 def home():
